@@ -8,6 +8,15 @@
 
 //età
 
+
+document.getElementById("btn-age").onclick = function(){
+
+   const età = document.getElementById("age").value;
+
+   console.log ("Età:",età,"anni");
+
+}
+
 // const età = parseInt(prompt("Quanti anni hai?"));
 
 // console.log(età);
@@ -18,49 +27,63 @@
 
 // console.log(km);
 
+
+
+//prova 
+
+
+document.getElementById("btn-dist").onclick = function(){
+
+   const km = document.getElementById("distance").value;
+
+   console.log ("Distanza:",km,"km");
+
+}
+
+
 //prezzo
 
-const prezzokm = 0.21;
+// const prezzokm = 0.21;
 
-let prezzo = km * prezzokm;
+// let prezzo = km * prezzokm;
 
-console.log(prezzo);
+// console.log(prezzo);
 
 //sconto
 
 
- if (età < '18') {
+//  if (età < '18') {
 
-    let scontoMinori = prezzo - (prezzo / 100 * 20);
+//     let scontoMinori = prezzo - (prezzo / 100 * 20);
 
-    console.log(scontoMinori);
+//     console.log(scontoMinori);
 
-    scontoMinori = scontoMinori.toFixed(2);
+//     scontoMinori = scontoMinori.toFixed(2);
 
-    document.getElementById("prezzoFinale").innerHTML = scontoMinori;
+//     document.getElementById("prezzoFinale").innerHTML = scontoMinori;
 
- } 
- else if (età > 65) {
+//  } 
+//  else if (età > 65) {
 
-    let scontoAnziani = prezzo - (prezzo / 100 * 40);
+//     let scontoAnziani = prezzo - (prezzo / 100 * 40);
 
-    console.log(scontoAnziani);
+//     console.log(scontoAnziani);
 
-    scontoAnziani = scontoAnziani.toFixed(2)
+//     scontoAnziani = scontoAnziani.toFixed(2)
 
-    document.getElementById("prezzoFinale").innerHTML = scontoAnziani;
+//     document.getElementById("prezzoFinale").innerHTML = scontoAnziani;
 
- } 
+//  } 
  
- else {
+//  else {
 
-    console.log(prezzo);
+//     console.log(prezzo);
 
-    prezzo = prezzo.toFixed(2)
+//     prezzo = prezzo.toFixed(2)
 
-    document.getElementById("prezzoFinale").innerHTML = prezzo;
+//     document.getElementById("prezzoFinale").innerHTML = prezzo;
 
- }
+//  }
 
 
 
