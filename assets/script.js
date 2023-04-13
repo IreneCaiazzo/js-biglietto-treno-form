@@ -8,15 +8,15 @@
 
 //età
 
-const età = parseInt(prompt("Quanti anni hai?"));
+// const età = parseInt(prompt("Quanti anni hai?"));
 
-console.log(età);
+// console.log(età);
 
 // chilometri
 
-const km = parseInt(prompt("Quanti chilometri vuoi percorrere?"));
+// const km = parseInt(prompt("Quanti chilometri vuoi percorrere?"));
 
-console.log(km);
+// console.log(km);
 
 //prezzo
 
