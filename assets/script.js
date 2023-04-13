@@ -6,49 +6,6 @@
 // // L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
 
-// //età
-
-
-// // document.getElementById("btn-age").onclick = function(){
-
-// //    const età = document.getElementById("age").value;
-
-// //    console.log ("Età:",età,"anni");
-
-// // };
-
-
-
-// //distanza
-
-
-
-// const eleKm = document.querySelector("#distance").value;
-
-// eleKm.addEventListener('click', function(){
-//    console.log ("Distanza:",km,"km");
-// });
-
-
-
-
-// //prezzo
-
-//  const prezzokm = 0.21;
-
-//  let prezzo = eleKm * prezzokm;
-
-//  console.log(prezzo);
-
-// //sconto
-
-
-  
-
-
-
-// //  scontoMinori = scontoMinori.toFixed(2);
-
 
 const eleNome = document.querySelector('#name');
 const eleEtà = document.querySelector('#age');
@@ -110,8 +67,6 @@ btn.addEventListener('click', function(){
    }
 
    printName.innerHTML = eleNome.value
-
-  
 
 });
 
