@@ -43,11 +43,11 @@ document.getElementById("btn-dist").onclick = function(){
 
 //prezzo
 
-// const prezzokm = 0.21;
+ const prezzokm = 0.21;
 
-// let prezzo = km * prezzokm;
+ let prezzo = km * prezzokm;
 
-// console.log(prezzo);
+ console.log(prezzo);
 
 //sconto
 
