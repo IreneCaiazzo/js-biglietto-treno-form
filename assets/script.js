@@ -1,90 +1,127 @@
-// Il programma dovrà chiedere all'utente il numero di chilometri che vuole percorrere e l'età del passeggero.
-// Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
-// il prezzo del biglietto è definito in base ai km (0.21 € al km)
-// va applicato uno sconto del 20% per i minorenni
-// va applicato uno sconto del 40% per gli over 65.
-// L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
+// // Il programma dovrà chiedere all'utente il numero di chilometri che vuole percorrere e l'età del passeggero.
+// // Sulla base di queste informazioni dovrà calcolare il prezzo totale del viaggio, secondo queste regole:
+// // il prezzo del biglietto è definito in base ai km (0.21 € al km)
+// // va applicato uno sconto del 20% per i minorenni
+// // va applicato uno sconto del 40% per gli over 65.
+// // L'output del prezzo finale va messo fuori in forma umana (con massimo due decimali, per indicare centesimi sul prezzo). Questo richiederà un minimo di ricerca.
 
 
-//età
+// //età
 
 
-document.getElementById("btn-age").onclick = function(){
+// // document.getElementById("btn-age").onclick = function(){
 
-   const età = document.getElementById("age").value;
+// //    const età = document.getElementById("age").value;
 
-   console.log ("Età:",età,"anni");
+// //    console.log ("Età:",età,"anni");
 
-}
-
-// const età = parseInt(prompt("Quanti anni hai?"));
-
-// console.log(età);
-
-// chilometri
-
-// const km = parseInt(prompt("Quanti chilometri vuoi percorrere?"));
-
-// console.log(km);
+// // };
 
 
 
-//prova 
+// //distanza
 
 
-document.getElementById("btn-dist").onclick = function(){
 
-   const km = document.getElementById("distance").value;
+// const eleKm = document.querySelector("#distance").value;
 
-   console.log ("Distanza:",km,"km");
-
-}
-
-
-//prezzo
-
- const prezzokm = 0.21;
-
- let prezzo = km * prezzokm;
-
- console.log(prezzo);
-
-//sconto
+// eleKm.addEventListener('click', function(){
+//    console.log ("Distanza:",km,"km");
+// });
 
 
-//  if (età < '18') {
 
-//     let scontoMinori = prezzo - (prezzo / 100 * 20);
 
-//     console.log(scontoMinori);
+// //prezzo
 
-//     scontoMinori = scontoMinori.toFixed(2);
+//  const prezzokm = 0.21;
 
-//     document.getElementById("prezzoFinale").innerHTML = scontoMinori;
+//  let prezzo = eleKm * prezzokm;
 
-//  } 
-//  else if (età > 65) {
+//  console.log(prezzo);
 
-//     let scontoAnziani = prezzo - (prezzo / 100 * 40);
+// //sconto
 
-//     console.log(scontoAnziani);
 
-//     scontoAnziani = scontoAnziani.toFixed(2)
+  
 
-//     document.getElementById("prezzoFinale").innerHTML = scontoAnziani;
 
-//  } 
+
+// //  scontoMinori = scontoMinori.toFixed(2);
+
+
+const eleNome = document.querySelector('#name');
+const eleEtà = document.querySelector('#age');
+const eleKm = document.querySelector('#distance');
+let printName = document.querySelector('#printName');
+let sconto = document.querySelector('#sconto');
+let prezzoFinale = document.querySelector('#prezzoFinale')
+
+const prezzokm = 0.21;
+
+
+const btn = document.querySelector('#btn');
+
+btn.addEventListener('click', function(){
+
+   let prezzo = eleKm.value * prezzokm;
+   console.log (eleNome.value);
+   console.log (eleEtà.value);
+   console.log (eleKm.value);
+   console.log (prezzo);
+
+   if (eleEtà.value < '18') {
+
+      let scontoMinori = prezzo - (prezzo / 100 * 20);
  
-//  else {
+      console.log(scontoMinori);
+ 
+      scontoMinori = scontoMinori.toFixed(2);
+      
+      sconto.innerHTML = "Sconto Minori";
 
-//     console.log(prezzo);
+      prezzoFinale.innerHTML = scontoMinori;
+ 
+   } 
+   else if (eleEtà.value > 65) {
 
-//     prezzo = prezzo.toFixed(2)
+      let scontoAnziani = prezzo - (prezzo / 100 * 40);
+ 
+      console.log(scontoAnziani);
+ 
+      scontoAnziani = scontoAnziani.toFixed(2)
+ 
+      sconto.innerHTML = "Sconto Anziani";
 
-//     document.getElementById("prezzoFinale").innerHTML = prezzo;
+      prezzoFinale.innerHTML = scontoAnziani;
+ 
+   } 
+  
+   else {
 
-//  }
+      console.log(prezzo);
+ 
+      prezzo = prezzo.toFixed(2)
+
+      sconto.innerHTML = "Standard";
+
+      prezzoFinale.innerHTML = prezzo;
+ 
+   }
+
+   printName.innerHTML = eleNome.value
+
+  
+
+});
 
 
 
-//  scontoMinori = scontoMinori.toFixed(2);
+  
+
+
+ 
+
+  
+
+  
